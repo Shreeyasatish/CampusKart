@@ -51,9 +51,10 @@ const Requestform = () => {
             id="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            required
           />
         </div>
-
+  
         <div className="form-group">
           <label htmlFor="productName">Product Name</label>
           <input
@@ -61,37 +62,41 @@ const Requestform = () => {
             id="productName"
             value={productName}
             onChange={(e) => setProductName(e.target.value)}
+            required
           />
         </div>
-
+  
         <div className="form-group">
           <label htmlFor="description">Description</label>
           <textarea
             id="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
+            required
           ></textarea>
         </div>
-
+  
         <div className="form-group">
           <label htmlFor="requestType">Request Type</label>
           <select
             id="requestType"
             value={requestType}
             onChange={(e) => setRequestType(e.target.value)}
+            required
           >
             <option value="">Select</option>
             <option value="buy">Buy</option>
             <option value="rent">Rent</option>
           </select>
         </div>
-
+  
         <div className="form-group">
           <label htmlFor="category">Category</label>
           <select
             id="category"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
+            required
           >
             <option value="">Select</option>
             <option value="Casual Stationery">Casual Stationery</option>
@@ -99,11 +104,12 @@ const Requestform = () => {
             <option value="Electronics">Electronics</option>
           </select>
         </div>
-
+  
         <button type="submit">Submit</button>
       </form>
     </div>
   );
+  
 };
 
 export default Requestform;
